@@ -1,0 +1,186 @@
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Invoice</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="license" href="https://www.opensource.org/licenses/mit-license/">
+	<script src="script.js"></script>
+	<script src="pdf.js"></script>
+	 <script src ="https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
+
+</head>
+
+<body>
+
+
+	<div id="invoice">
+
+
+		<p style="font-size:11px">Date/Time: <span id="datetime"></span></p>
+		<p style="text-align:right ;font-size:12px">Estimate Copy </p>
+
+
+		<script>
+			var dt = new Date();
+			document.getElementById("datetime").innerHTML = (("0" + dt.getDate()).slice(-2)) + "/" + (("0" + (dt.getMonth() + 1)).slice(-2)) + "/" + (dt.getFullYear()) + " / " + (("0" + dt.getHours()).slice(-2)) + ":" + (("0" + dt.getMinutes()).slice(-2));
+		</script>
+
+		<br>
+		<p style="font-size:12px">Mob: 7526019317 / 7526067301 </p><br>
+
+		<article>
+
+			<table class="meta">
+				<tr>
+					<td><span id="prefix">Rs</span><span></span></td>
+				</tr>
+				<div class="col-md-12 text-right mb-3">
+					<p style="text-align:center ;font-size:12px">
+						<button class="btn btn-primary" id="download">SAVE
+
+					</p></button></p>
+				</div>
+			</table>
+
+			<table class="inventory">
+				<thead>
+
+
+					<tr>
+						<th width="35%"><span>Item Name</span></th>
+						<th width="20%"><span>Size/Description</span></th>
+						<th width="15%"><span>Quantity</span></th>
+						<th width="15%"><span>Rate</span></th>
+						<th width="15%"><span>Price</span></th>
+					</tr>
+				</thead>
+				<tbody>
+				
+					<tr>
+						<td><a class="cut" >-</a><span contenteditable></span></td>
+						<td><span contenteditable></span></td>
+						<td><span contenteditable></span></td>
+						<td></span><span contenteditable></span></td>
+						<td></span><span></span></td>
+					</tr>
+					<tr>
+						<td><a class="cut" >-</a><span contenteditable></span></td>
+						<td><span contenteditable></span></td>
+						<td><span contenteditable></span></td>
+						<td></span><span contenteditable></span></td>
+						<td></span><span></span></td>
+					</tr>
+					<tr>
+						<td><a class="cut" >-</a><span contenteditable></span></td>
+						<td><span contenteditable></span></td>
+						<td><span contenteditable></span></td>
+						<td></span><span contenteditable></span></td>
+						<td></span><span></span></td>
+					</tr>
+					<tr>
+						<td><a class="cut" >-</a><span contenteditable></span></td>
+						<td><span contenteditable></span></td>
+						<td><span contenteditable></span></td>
+						<td></span><span contenteditable></span></td>
+						<td></span><span></span></td>
+					</tr>
+					<tr>
+						<td><a class="cut" >-</a><span contenteditable></span></td>
+						<td><span contenteditable></span></td>
+						<td><span contenteditable></span></td>
+						<td></span><span contenteditable></span></td>
+						<td></span><span></span></td>
+					</tr>
+					<tr>
+						<td><a class="cut" >-</a><span contenteditable></span></td>
+						<td><span contenteditable></span></td>
+						<td><span contenteditable></span></td>
+						<td></span><span contenteditable></span></td>
+						<td></span><span></span></td>
+					</tr>
+					<tr>
+						<td><a class="cut" >-</a><span contenteditable></span></td>
+						<td><span contenteditable></span></td>
+						<td><span contenteditable></span></td>
+						<td></span><span contenteditable></span></td>
+						<td></span><span></span></td>
+					</tr>
+					<tr>
+						<td><a class="cut" >-</a><span contenteditable></span></td>
+						<td><span contenteditable></span></td>
+						<td><span contenteditable></span></td>
+						<td></span><span contenteditable></span></td>
+						<td></span><span></span></td>
+					</tr>
+					<tr>
+						<td><a class="cut" >-</a><span contenteditable></span></td>
+						<td><span contenteditable></span></td>
+						<td><span contenteditable></span></td>
+						<td></span><span contenteditable></span></td>
+						<td></span><span></span></td>
+					</tr>
+					<tr>
+						<td><a class="cut" >-</a><span contenteditable></span></td>
+						<td><span contenteditable></span></td>
+						<td><span contenteditable></span></td>
+						<td></span><span contenteditable></span></td>
+						<td></span><span></span></td>
+					</tr>
+
+
+
+
+
+				</tbody>
+			</table>
+			<a class="add" id="addd"> + </a>
+
+
+			<table class="balance">
+				<tr>
+					<th><span>Total</span></th>
+					<td><span data-prefix>Rs</span><span></span></td>
+				</tr>
+				<tr>
+					<th><span>Amount Paid</span></th>
+					<td><span></span><span contenteditable></span></td>
+				</tr>
+				<tr>
+					<th><span>Rest Amount</span></th>
+					<td><span data-prefix;>Rs</span><span></span></td>
+				</tr>
+			</table>
+
+			<aside>
+
+				<p style="font-size:11px">Baught Things Can Not Be Returned. </p>
+				<button class="but" onclick="window.print()">Print</button>
+
+				<!--below code to open new tabe  -->
+				<br><a href="file:///C:/Users/Shivam/Desktop/New%20folder%20(2)/Cobra/invoice.html" target="_blank">
+					<p style="text-align:center ;font-size:15px">New Tab</p>
+				</a><br>
+				<span contenteditable>
+					<p style="font-size:15px">-----------------
+				</span></p>
+				<div contenteditable>
+
+			</aside>
+
+
+	</div>
+
+
+
+	</article>
+
+
+	</div>
+
+</body>
+
+</html>
