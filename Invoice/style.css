@@ -149,7 +149,9 @@ content: counter(Serial) "."; /* Display the counter */
 
 .add { margin: -2.5em 0 0; }
 
-.add:hover { background: green; }
+@media only screen {
+        .add:hover { background: green; }
+}
 
 .cut { opacity: 0; position: absolute; top: 0; left: -1.5em; }
 .cut { -webkit-transition: opacity 100ms ease-in; }
@@ -179,4 +181,56 @@ tr:hover .cut { opacity: 1; }
 
 /* highlight the row where cursor is present */
 
+@media only screen {
 tr:hover {background-color:#16c79a;}
+}
+
+/* hiding from printing  */
+@media print{
+   .noprint{
+       display:none;
+   }
+}
+
+
+/* button  */
+.btn {
+  -webkit-border-radius: 8;
+  -moz-border-radius: 8;
+  border-radius: 8px;
+  font-family: Courier New;
+  color: #ffffff;
+  font-size: 22px;
+  background: #2a5e80;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #1b2933;
+  background-image: -webkit-linear-gradient(top, #1b2933, #324c5e);
+  background-image: -moz-linear-gradient(top, #1b2933, #324c5e);
+  background-image: -ms-linear-gradient(top, #1b2933, #324c5e);
+  background-image: -o-linear-gradient(top, #1b2933, #324c5e);
+  background-image: linear-gradient(to bottom, #1b2933, #324c5e);
+  text-decoration: none;
+}
+
+.posmid{
+	/* display: :inline; */
+	position: absolute;
+	right: 550;
+
+}
+.posleft{
+	/* display: :inline; */
+	position: absolute;
+
+
+}
+.posright{
+	/* display: :inline; */
+	position: absolute;
+	right: 270;
+
+}

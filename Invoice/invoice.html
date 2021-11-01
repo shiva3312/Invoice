@@ -5,9 +5,17 @@
 	<title>Invoice</title>
 	<link rel="stylesheet" href="style.css">
 	<link rel="license" href="https://www.opensource.org/licenses/mit-license/">
+
+	<!-- bootstrap cdn -->
+	<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> -->
+
+	<!-- cdn to make html to pdf  https://github.com/eKoopmans/html2pdf.js  -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous"
+		referrerpolicy="no-referrer"></script>
+
 	<script src="script.js"></script>
 	<script src="pdf.js"></script>
-	 <script src ="https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
+	<script src="https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
@@ -21,165 +29,144 @@
 
 
 		<p style="font-size:11px">Date/Time: <span id="datetime"></span></p>
-		<p style="text-align:right ;font-size:12px">Estimate Copy </p>
-
-
 		<script>
 			var dt = new Date();
 			document.getElementById("datetime").innerHTML = (("0" + dt.getDate()).slice(-2)) + "/" + (("0" + (dt.getMonth() + 1)).slice(-2)) + "/" + (dt.getFullYear()) + " / " + (("0" + dt.getHours()).slice(-2)) + ":" + (("0" + dt.getMinutes()).slice(-2));
 		</script>
-
-		<br>
-		<p style="font-size:12px">Mob: 7526019317 / 7526067301 </p><br>
+    
+		<p style="text-align:right ;font-size:13px">Estimate Copy </p><br>
+		<p style="font-size:13px">Mob: 7526019317 / 7526067301 </p>
 
 		<article>
 
 			<table class="meta">
 				<tr>
 					<td><span id="prefix">Rs</span><span></span></td>
-				</tr>
-				<div class="col-md-12 text-right mb-3">
-					<p style="text-align:center ;font-size:12px">
-						<button class="btn btn-primary" id="download">SAVE
+				</tr </table>
 
-					</p></button></p>
-				</div>
-			</table>
+				<table class="inventory">
 
-			<table class="inventory">
-				<thead>
+					<thead>
+						<tr>
+							<th width="35%"><span>Item Name</span></th>
+							<th width="20%"><span>Size/Description</span></th>
+							<th width="15%"><span>Quantity</span></th>
+							<th width="15%"><span>Rate</span></th>
+							<th width="15%"><span>Price</span></th>
+						</tr>
+					</thead>
+					<tbody>
+
+						<tr>
+							<td><a class="cut">-</a><span contenteditable></span></td>
+							<td><span contenteditable></span></td>
+							<td><span contenteditable></span></td>
+							<td></span><span contenteditable></span></td>
+							<td></span><span></span></td>
+						</tr>
+						<tr>
+							<td><a class="cut">-</a><span contenteditable></span></td>
+							<td><span contenteditable></span></td>
+							<td><span contenteditable></span></td>
+							<td></span><span contenteditable></span></td>
+							<td></span><span></span></td>
+						</tr>
+						<tr>
+							<td><a class="cut">-</a><span contenteditable></span></td>
+							<td><span contenteditable></span></td>
+							<td><span contenteditable></span></td>
+							<td></span><span contenteditable></span></td>
+							<td></span><span></span></td>
+						</tr>
+						<tr>
+							<td><a class="cut">-</a><span contenteditable></span></td>
+							<td><span contenteditable></span></td>
+							<td><span contenteditable></span></td>
+							<td></span><span contenteditable></span></td>
+							<td></span><span></span></td>
+						</tr>
+						<tr>
+							<td><a class="cut">-</a><span contenteditable></span></td>
+							<td><span contenteditable></span></td>
+							<td><span contenteditable></span></td>
+							<td></span><span contenteditable></span></td>
+							<td></span><span></span></td>
+						</tr>
+						<tr>
+							<td><a class="cut">-</a><span contenteditable></span></td>
+							<td><span contenteditable></span></td>
+							<td><span contenteditable></span></td>
+							<td></span><span contenteditable></span></td>
+							<td></span><span></span></td>
+						</tr>
+						<tr>
+							<td><a class="cut">-</a><span contenteditable></span></td>
+							<td><span contenteditable></span></td>
+							<td><span contenteditable></span></td>
+							<td></span><span contenteditable></span></td>
+							<td></span><span></span></td>
+						</tr>
+						<tr>
+							<td><a class="cut">-</a><span contenteditable></span></td>
+							<td><span contenteditable></span></td>
+							<td><span contenteditable></span></td>
+							<td></span><span contenteditable></span></td>
+							<td></span><span></span></td>
+						</tr>
+						<tr>
+							<td><a class="cut">-</a><span contenteditable></span></td>
+							<td><span contenteditable></span></td>
+							<td><span contenteditable></span></td>
+							<td></span><span contenteditable></span></td>
+							<td></span><span></span></td>
+						</tr>
+						<tr>
+							<td><a class="cut">-</a><span contenteditable></span></td>
+							<td><span contenteditable></span></td>
+							<td><span contenteditable></span></td>
+							<td></span><span contenteditable></span></td>
+							<td></span><span></span></td>
+						</tr>
+					</tbody>
+				</table>
+
+				<a class="add" id="addd"> + </a>
 
 
+				<table class="balance">
 					<tr>
-						<th width="35%"><span>Item Name</span></th>
-						<th width="20%"><span>Size/Description</span></th>
-						<th width="15%"><span>Quantity</span></th>
-						<th width="15%"><span>Rate</span></th>
-						<th width="15%"><span>Price</span></th>
-					</tr>
-				</thead>
-				<tbody>
-				
-					<tr>
-						<td><a class="cut" >-</a><span contenteditable></span></td>
-						<td><span contenteditable></span></td>
-						<td><span contenteditable></span></td>
-						<td></span><span contenteditable></span></td>
-						<td></span><span></span></td>
+						<th><span>Total</span></th>
+						<td><span data-prefix>Rs</span><span></span></td>
 					</tr>
 					<tr>
-						<td><a class="cut" >-</a><span contenteditable></span></td>
-						<td><span contenteditable></span></td>
-						<td><span contenteditable></span></td>
-						<td></span><span contenteditable></span></td>
-						<td></span><span></span></td>
+						<th><span>Amount Paid</span></th>
+						<td><span></span><span contenteditable></span></td>
 					</tr>
 					<tr>
-						<td><a class="cut" >-</a><span contenteditable></span></td>
-						<td><span contenteditable></span></td>
-						<td><span contenteditable></span></td>
-						<td></span><span contenteditable></span></td>
-						<td></span><span></span></td>
+						<th><span>Rest Amount</span></th>
+						<td><span data-prefix;>Rs</span><span></span></td>
 					</tr>
-					<tr>
-						<td><a class="cut" >-</a><span contenteditable></span></td>
-						<td><span contenteditable></span></td>
-						<td><span contenteditable></span></td>
-						<td></span><span contenteditable></span></td>
-						<td></span><span></span></td>
-					</tr>
-					<tr>
-						<td><a class="cut" >-</a><span contenteditable></span></td>
-						<td><span contenteditable></span></td>
-						<td><span contenteditable></span></td>
-						<td></span><span contenteditable></span></td>
-						<td></span><span></span></td>
-					</tr>
-					<tr>
-						<td><a class="cut" >-</a><span contenteditable></span></td>
-						<td><span contenteditable></span></td>
-						<td><span contenteditable></span></td>
-						<td></span><span contenteditable></span></td>
-						<td></span><span></span></td>
-					</tr>
-					<tr>
-						<td><a class="cut" >-</a><span contenteditable></span></td>
-						<td><span contenteditable></span></td>
-						<td><span contenteditable></span></td>
-						<td></span><span contenteditable></span></td>
-						<td></span><span></span></td>
-					</tr>
-					<tr>
-						<td><a class="cut" >-</a><span contenteditable></span></td>
-						<td><span contenteditable></span></td>
-						<td><span contenteditable></span></td>
-						<td></span><span contenteditable></span></td>
-						<td></span><span></span></td>
-					</tr>
-					<tr>
-						<td><a class="cut" >-</a><span contenteditable></span></td>
-						<td><span contenteditable></span></td>
-						<td><span contenteditable></span></td>
-						<td></span><span contenteditable></span></td>
-						<td></span><span></span></td>
-					</tr>
-					<tr>
-						<td><a class="cut" >-</a><span contenteditable></span></td>
-						<td><span contenteditable></span></td>
-						<td><span contenteditable></span></td>
-						<td></span><span contenteditable></span></td>
-						<td></span><span></span></td>
-					</tr>
+				</table>
 
-
-
-
-
-				</tbody>
-			</table>
-			<a class="add" id="addd"> + </a>
-
-
-			<table class="balance">
-				<tr>
-					<th><span>Total</span></th>
-					<td><span data-prefix>Rs</span><span></span></td>
-				</tr>
-				<tr>
-					<th><span>Amount Paid</span></th>
-					<td><span></span><span contenteditable></span></td>
-				</tr>
-				<tr>
-					<th><span>Rest Amount</span></th>
-					<td><span data-prefix;>Rs</span><span></span></td>
-				</tr>
-			</table>
-
-			<aside>
-
-				<p style="font-size:11px">Baught Things Can Not Be Returned. </p>
-				<button class="but" onclick="window.print()">Print</button>
-
-				<!--below code to open new tabe  -->
-				<br><a href="file:///C:/Users/Shivam/Desktop/New%20folder%20(2)/Cobra/invoice.html" target="_blank">
-					<p style="text-align:center ;font-size:15px">New Tab</p>
-				</a><br>
-				<span contenteditable>
-					<p style="font-size:15px">-----------------
-				</span></p>
-				<div contenteditable>
-
-			</aside>
+				<aside>
+					<p style="font-size:11px">Baught Things Can Not Be Returned. </p><br><br>
+				  <input type="text" style="width: 330px; height: 25px; padding:3px" placeholder="Customer Name " name="Name" id="a">
+					<button class="noprint add_name" onclick="add(document.getElementById('a').value)"></button>
+				</aside>
 
 
 	</div>
-
-
 
 	</article>
 
 
 	</div>
+
+	<button style="text-align: center;" class="btn noprint" onclick="window.print()">Print</button>
+	<button style="text-align: center ;" class="btn btn-primary noprint posmid" id="download" onclick="sendname(name)">SAVE</p></button>
+	<a  href='javascript:void();' style="text-align:right ;" class="noprint btn posright " href="file:///C:/Users/Shivam/Desktop/New%20folder%20(2)/Cobra/invoice.html" target="_blank">New Tab<a>
+
+  <!-- herf = 'javascript:vcoid()'' makes yourpage stay there when you click near <a> tag it take you up  -->
 
 </body>
 

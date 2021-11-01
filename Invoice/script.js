@@ -253,10 +253,40 @@ function onContentLoad() {
 
 
 
-document.addEventListener("keypress",function (event){
-  if(event.key == "?")
-  document.getElementById("addd").click();
-});
+
+var Name;
+function add(a) {
+	Name =a;
+}
+
+
+// document.addEventListener("keypress",function (event){
+// 	if(event.key == "?")
+// 	document.getElementById("addd").click();
+// });
+
+
+
+// CTRL + q to add /  and CTRL +c to cut last child button
+
+let keysDown = {};
+window.onkeydown = function(e) {
+  keysDown[e.key] = true;
+
+  if (keysDown["Control"] && keysDown["q"]) {
+   document.getElementById("addd").click();
+  }
+  else if( keysDown["Control"] && keysDown["c"] ){
+    // console.log("control + c");
+		// write code to cut last cell of thetable
+
+
+  }
+}
+
+window.onkeyup = function(e) {
+  keysDown[e.key] = false;
+}
 
 
 
@@ -265,12 +295,16 @@ document.addEventListener("keypress",function (event){
 window.onload = function () {
     document.getElementById("download")
         .addEventListener("click", () => {
+
+					document.querySelector(".add_name").click();  // to click add_name button;
+
             const invoice = this.document.getElementById("invoice");
+
             console.log(invoice);
             console.log(window);
             var opt = {
                 margin: 1,
-                filename: 'myfile.pdf',
+                filename: Name +'.pdf',
                 image: { type: 'jpeg', quality: 0.98},
                 html2canvas: { scale: 2 },
                 jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
@@ -278,7 +312,6 @@ window.onload = function () {
             html2pdf().from(invoice).set(opt).save();
         })
 }
-
 
 
 
