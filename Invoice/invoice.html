@@ -33,7 +33,7 @@
 			var dt = new Date();
 			document.getElementById("datetime").innerHTML = (("0" + dt.getDate()).slice(-2)) + "/" + (("0" + (dt.getMonth() + 1)).slice(-2)) + "/" + (dt.getFullYear()) + " / " + (("0" + dt.getHours()).slice(-2)) + ":" + (("0" + dt.getMinutes()).slice(-2));
 		</script>
-    
+
 		<p style="text-align:right ;font-size:13px">Estimate Copy </p><br>
 		<p style="font-size:13px">Mob: 7526019317 / 7526067301 </p>
 
@@ -44,7 +44,7 @@
 					<td><span id="prefix">Rs</span><span></span></td>
 				</tr </table>
 
-				<table class="inventory">
+				<table class="inventory" >
 
 					<thead>
 						<tr>
@@ -155,18 +155,21 @@
 				</aside>
 
 
-	</div>
 
 	</article>
 
+	<div >
+		<button  class="btn noprint" onclick="window.print()">Print</button>
+		<button  class="btn btn-primary noprint posmid" id="download" onclick="sendname(name)">SAVE</p></button>
+		<!-- <a  href='javascript:void();' style="text-align:right ;" class="noprint btn posright " href="file:///C:/Users/Shivam/Desktop/New%20folder%20(2)/Cobra/invoice.html" target="_blank">New Tab<a> -->
+		<a  style="" class=" btn noprint  posright " href="file:///C:/Users/Shivam%20Chaurasiya/Desktop/BIG%20BANG/GIT%20WORKS/Inovice(using_version)/Invoice/invoice.html" target="_blank">New Tab<a>
+
+		<!-- herf = 'javascript:vcoid()'' makes yourpage stay there when you click near <a> tag it take you up  -->
+	</div>
 
 	</div>
 
-	<button style="text-align: center;" class="btn noprint" onclick="window.print()">Print</button>
-	<button style="text-align: center ;" class="btn btn-primary noprint posmid" id="download" onclick="sendname(name)">SAVE</p></button>
-	<a  href='javascript:void();' style="text-align:right ;" class="noprint btn posright " href="file:///C:/Users/Shivam/Desktop/New%20folder%20(2)/Cobra/invoice.html" target="_blank">New Tab<a>
 
-  <!-- herf = 'javascript:vcoid()'' makes yourpage stay there when you click near <a> tag it take you up  -->
 
 </body>
 

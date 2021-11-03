@@ -273,7 +273,7 @@ let keysDown = {};
 window.onkeydown = function(e) {
   keysDown[e.key] = true;
 
-  if (keysDown["Control"] && keysDown["q"]) {
+  if ((keysDown["Control"] && keysDown["q"]) ||(keysDown["Control"] && keysDown["Q"])) {
    document.getElementById("addd").click();
   }
   else if( keysDown["Control"] && keysDown["c"] ){

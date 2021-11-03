@@ -218,19 +218,27 @@ tr:hover {background-color:#16c79a;}
 
 .posmid{
 	/* display: :inline; */
-	position: absolute;
-	right: 550;
+	position:relative;
+	left: 11rem;
+	right: auto;
 
 }
 .posleft{
 	/* display: :inline; */
-	position: absolute;
+	position: relative;
+	left:0em;
+	right: auto;
 
 
 }
 .posright{
 	/* display: :inline; */
-	position: absolute;
-	right: 270;
+	position: relative;
+	left: 20rem;
+	top: 13px;
+	padding-bottom: 2px;
+	padding-top: 2px;
 
 }
+
+.bottom_part
