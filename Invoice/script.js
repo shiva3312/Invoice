@@ -294,14 +294,9 @@ window.onkeyup = function(e) {
 
 window.onload = function () {
     document.getElementById("download")
-        .addEventListener("click", () => {
-
-					document.querySelector(".add_name").click();  // to click add_name button;
-
-            const invoice = this.document.getElementById("invoice");
-
-            console.log(invoice);
-            console.log(window);
+		.addEventListener("click", () => {
+			document.querySelector(".add_name").click();  // to click add_name button;
+			const invoice = this.document.getElementById("invoice");
             var opt = {
                 margin: 1,
                 filename: Name +'.pdf',
@@ -312,7 +307,5 @@ window.onload = function () {
             html2pdf().from(invoice).set(opt).save();
         })
 }
-
-
 
 window.addEventListener && document.addEventListener('DOMContentLoaded', onContentLoad);
