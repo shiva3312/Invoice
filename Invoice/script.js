@@ -273,13 +273,16 @@ let keysDown = {};
 window.onkeydown = function(e) {
   keysDown[e.key] = true;
 
-  if ((keysDown["Control"] && keysDown["q"]) ||(keysDown["Control"] && keysDown["Q"])) {
+	// add row by clicking ctrl+i
+	if ((keysDown["Control"] && keysDown["i"])) {
    document.getElementById("addd").click();
   }
-  else if( keysDown["Control"] && keysDown["c"] ){
-    // console.log("control + c");
-		// write code to cut last cell of thetable
-
+    //  cut last row of thetable
+	else if (keysDown["Control"] && keysDown["m"]) {  
+		const allRow = document.getElementsByTagName('tr');
+		const lastRow = allRow[allRow.length - 4];
+		const cutterOfLastRow = lastRow.firstElementChild.firstChild;
+		cutterOfLastRow.click();
 
   }
 }
@@ -308,4 +311,16 @@ window.onload = function () {
         })
 }
 
+function printFunction() {
+	const customerName = (document.getElementById('a').value);
+	if (customerName == '' || customerName == 'undefined' || customerName.length < 4) {
+		alert("Please Enter The Customer Name")
+	} else {
+
+		// printing the file .....			
+		const printData = window.print();
+		//saving file in pdf by clicking the save button 
+		document.getElementById('download').click()
+	}
+} 1
 window.addEventListener && document.addEventListener('DOMContentLoaded', onContentLoad);
